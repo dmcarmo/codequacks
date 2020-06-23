@@ -11,6 +11,6 @@ class DucksController < ApplicationController
 
   private
   def duck_params
-    params.require(:restaurant).permit(:name, :description, :price)
+    params.require(:duck).permit(:name, :description, :price)
   end
 end
