@@ -1,7 +1,21 @@
-<% @bookings.each do |booking| %>
-  <%= booking.duck.name %>
-  <%= booking.duck.description %>
-  <%= booking.duck.price %>
-  <%= booking.start_time.strftime("%-d %b") %>
-  <%= booking.end_time.strftime("%-d %b") %>
-<% end %>
+<div class="container" style="margin: 20px">
+  <div class="card" style="width: 18rem;">
+      <img src="https://s3.distributorcentral.com/uploads/6/7/675EF039D810396DCC3D57CF6138224B.jpg" class="card-img-top" alt="..." />
+      <div class="card-product-infos">
+        <div class="card-body">
+            <% @bookings.each do |booking| %>
+             <h5 class="card-title"><%= booking.duck.name %></h5>
+              <h3><%= booking.duck.description %></h3>
+              <p class="card-text"><%= booking.duck.price %></p>
+              <p><%= booking.start_time.strftime("%-d %b") %></p>
+              <p><%= booking.end_time.strftime("%-d %b") %></p>
+            <% end %>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
