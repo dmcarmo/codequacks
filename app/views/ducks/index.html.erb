@@ -1,1 +1,15 @@
 <h1>Index</h1>
+<% @ducks.each do |duck| %>
+<%= duck %>
+    <div class="duck-card">
+      <img src="https://unsplash.com/photos/wF7GqWA3Tag" />
+      <div class="duck-card-info">
+        <h2>Duck Name</h2>
+        <p>Description</p>
+        <p>Price</p>
+        <p>User_id</p>
+        <p>Created_at</p>
+        <p>updated_at</p>
+      </div>
+    </div>
+<% end %>
