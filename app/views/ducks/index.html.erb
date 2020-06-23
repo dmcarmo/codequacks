@@ -1,15 +1,16 @@
 <h1>Index</h1>
 <% @ducks.each do |duck| %>
-<%= duck %>
+  <%= link_to duck_path(duck) do %>
     <div class="duck-card">
-      <img src="https://unsplash.com/photos/wF7GqWA3Tag" />
+      <img src="https://images.unsplash.com/photo-1559715541-5daf8a0296d0" width=250px/>
       <div class="duck-card-info">
-        <h2>Duck Name</h2>
-        <p>Description</p>
-        <p>Price</p>
-        <p>User_id</p>
-        <p>Created_at</p>
-        <p>updated_at</p>
+        <h2>Duck Name <%= duck.name %></h2>
+        <p>Description <%= duck.description %></p>
+        <p>Price <%= duck.price %></p>  
+        <p>User_id <%= duck.user_id %></p>
+        <p>Created_at <%= duck.created_at %></p>
+        <p>updated_at <%= duck.updated_at %></p>
       </div>
     </div>
+  <% end %>  
 <% end %>

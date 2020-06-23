@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/ducks/new', to: 'ducks#new'
   post '/ducks', to: 'ducks#create'
   post '/ducks/:id/bookings', to: 'bookings#create'
-  get '/ducks/:id', to: 'ducks#show'
+  get '/ducks/:id', to: 'ducks#show', as: :duck
   get '/dashboard', to: 'pages#dashboard'
   get '/bookings', to: 'bookings#index'
   post '/bookings/:id/reviews', to: 'reviews#create'
