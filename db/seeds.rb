@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Review.destroy_all
 Booking.destroy_all
 Duck.destroy_all
 User.destroy_all
@@ -23,16 +24,23 @@ database = Duck.create(name: "Database", description: "A helper class to manage 
 css = Duck.create(name: "CSS", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use CSS", price: 15.00, user: sylvia)
 html = Duck.create(name: "HTML", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML", price: 15.00, user: david_carmo)
 rails = Duck.create(name: "Rails", description: "The Rails framework provides a large number of helpers for working with assets, dates, forms, numbers and model objects, to name a few.", price: 20.00, user: david_wylie)
-ruby = Duck.create(name: "Ruby", description: "Introduction. This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+ruby = Duck.create(name: "Ruby", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
 
 puts "Finished!"
 
 puts "Creating bookings..."
 booking_1 = Booking.create(user: isaline, duck: java_script, start_time: DateTime.strptime("09/7/2020 8:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("16/7/2020 8:00", "%d/%m/%Y %H:%M"), total_cost: 30)
-booking_1 = Booking.create(user: david_wylie, duck: ruby, start_time: DateTime.strptime("08/7/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("10/7/2020 10:00", "%d/%m/%Y %H:%M"), total_cost: 45)
+booking_2 = Booking.create(user: david_wylie, duck: ruby, start_time: DateTime.strptime("08/7/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("10/7/2020 10:00", "%d/%m/%Y %H:%M"), total_cost: 45)
 booking_3 = Booking.create(user: david_carmo, duck: rails, start_time: DateTime.strptime("08/2/2021 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("06/3/2021 12:00", "%d/%m/%Y %H:%M"), total_cost: 40)
 booking_4 = Booking.create(user: sylvia, duck: css, start_time: DateTime.strptime("08/12/2023 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/12/2023 5:00", "%d/%m/%Y %H:%M"), total_cost: 75)
-booking_5 = Booking.create(user: david_carmo, duck: html, start_time: DateTime.strptime("06/8/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/9/2020 3:00", "%d/%m/%Y %H:%M"), total_cost: 28)
+booking_5 = Booking.create(user: david_carmo, duck: html, start_time: DateTime.strptime("06/8/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/9/2020 3:00", "%d/%m/%Y %H:%M"), total_cost: 75)
+
+
+puts "Creating reviews..."
+review_1 = Review.create(user: isaline, booking: booking_1, content: "I play with this duck and my cat every night for one year.")
+review_2 = Review.create(user: david_wylie, booking: booking_2, content: "As a wife and mother, I LOVE this duck. It keeps me in my place, allows me to get dinner ready on time, AND only costs 72 percent more than other ducks.")
+review_3 = Review.create(user: david_carmo, booking: booking_3, content: "Serves as a wonderful pet and a delicious snack")
+review_4 = Review.create(user: sylvia, booking: booking_4, content: "Really takes my breath away")
+review_5 = Review.create(user: david_carmo, booking: booking_5, content: "Very nice addition to the living room")
 
 puts "Finished!"
-
