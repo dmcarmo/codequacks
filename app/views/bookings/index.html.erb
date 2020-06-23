@@ -1,1 +1,7 @@
-index.html.erb
+<% @bookings.each do |booking| %>
+  <%= booking.duck.name %>
+  <%= booking.duck.description %>
+  <%= booking.duck.price %>
+  <%= booking.start_time.strftime("%-d %b") %>
+  <%= booking.end_time.strftime("%-d %b") %>
+<% end %>
