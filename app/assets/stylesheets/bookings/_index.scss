@@ -1,3 +1,43 @@
 .card {
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: rgba(254, 127, 45, 0.4);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.container {
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  margin: auto;
+  padding-bottom: 30px;
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  background-color: rgba(255,255,255,0.5);
+
+}
+
+h1 {
+  text-align: center;
+  color: rgba(254, 127, 45, 0.9);
+  font-family: 'Krona One', sans-serif;
+
+}
+
+h5 {
+  font-family: 'Krona One', sans-serif;
+
+}
+
+h6 {
+  text-align: left;
+}
+.btn {
+  background-color: #506D4E;
+  border-color: #506D4E;
+  border-radius: 25px;
 }
