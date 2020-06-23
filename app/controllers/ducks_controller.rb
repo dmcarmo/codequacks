@@ -1,4 +1,9 @@
 class DucksController < ApplicationController
+
+  def index
+    @ducks = Duck.all
+  end
+
   def new
     @duck = Duck.new
   end
