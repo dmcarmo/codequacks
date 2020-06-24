@@ -1,7 +1,12 @@
 class DucksController < ApplicationController
 
+  # include Pundit
+
+  skip_before_action :authenticate_user!, only: [:index]
+  skip_after_action :verify_authorized, only: [:index]
+
   def index
-    @ducks = Duck.all
+    @ducks = policy_scope(Duck).order(name: :asc)
   end
 
   def show
