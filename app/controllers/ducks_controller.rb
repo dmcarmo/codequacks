@@ -21,13 +21,17 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.new(duck_params)
-    @duck.save
+    @duck.user = current_user
     authorize @duck
-    redirect_to ducks_path(@duck)
+    if @duck.save
+      redirect_to ducks_path
+    else
+      render :new
+    end
   end
 
   private
   def duck_params
-    params.require(:duck).permit(:name, :description, :price)
+    params.require(:duck).permit(:name, :description, :price, :photo)
   end
 end
