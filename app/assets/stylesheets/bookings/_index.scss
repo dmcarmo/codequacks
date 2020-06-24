@@ -1,3 +1,91 @@
 .card {
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: rgba(254, 127, 45, 0.1);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
+
+}
+
+.container {
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 10px;
+  margin: auto;
+  padding-bottom: 30px;
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  background-color: #FCF4E9;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to left, #ffffff, #ffffff);
+}
+
+h3 {
+  text-align: center;
+  padding-left: 30px;
+  color: orange;
+  font-family: 'Krona One', sans-serif;
+}
+
+    /* Shadows are visible under slightly transparent text color */
+  span {
+    border-top:1px solid #6c5c5d;
+    margin-left: 200px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:7px 15px 9px 15px;
+    line-height:34px;
+    font-size:15px;
+    background: linear-gradient(to bottom, #31221f, #030000);
+    color:#c3bcb6;
+    font-family:sans-serif;
+    text-shadow:
+        -1px -1px 0 #030000,
+        1px -1px 0 #030000,
+        -1px 1px 0 #030000,
+        1px 1px 0 #030000,
+        0 0 4px #fff;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-family:courier;
+    font-weight:bold;
+    position:relative;
+    top:18px;
+    left: 270px;
+}
+
+div{
+    padding-left:20px;
+}
+
+h5 {
+  font-family: 'Krona One', sans-serif;
+
+}
+
+h6 {
+  text-align: left;
+}
+
+.body-bookings {
+  background-image: url("https://images.assetsdelivery.com/compings_v2/iunewind/iunewind1602/iunewind160200039.jpg");
+  background-size: 1000px 700px;
+}
+
+.btn {
+  border-color: rgb(254, 127, 45);
+  background-color: rgb(254, 127, 45);
+  color: white;
+  border-width: 2px;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #506D4E;
+  border-color: #506D4E;
 }
