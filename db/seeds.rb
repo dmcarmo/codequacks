@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+
 Review.destroy_all
 Booking.destroy_all
 Duck.destroy_all
@@ -20,11 +22,29 @@ puts "Finished!"
 
 puts "Creating ducks..."
 java_script = Duck.create(name: "Java Script", description: "Useful javascript functions and classes. The main helper is fw , an object containing constants, methods and classes.", price: 23.00, user: sylvia)
+file = URI.open('https://assets.onbuy.com/i26/product/f681eec013ce4742a40ec97d8e24a9b9-m502897/sunny-cool-sunglasses-rubber-duck-fun-pool-or-bath-toy.jpg')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+
 database = Duck.create(name: "Database", description: "A helper class to manage database creation and version management. You create a subclass implementing onCreate(SQLiteDatabase.", price: 10.00, user: isaline)
+file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2017/07/Trump-rubber-duck-Amsterdam-Duck-Store.jpg')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 css = Duck.create(name: "CSS", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use CSS", price: 15.00, user: sylvia)
+file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/superwoman-rubber-duck-leaning.jpg')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 html = Duck.create(name: "HTML", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML", price: 15.00, user: david_carmo)
+file = URI.open('https://smhttp-ssl-79234.nexcesscdn.net/pub/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/vender-PL/17138/RD140-YEL_ab-prime_item_9.jpg')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 rails = Duck.create(name: "Rails", description: "The Rails framework provides a large number of helpers for working with assets, dates, forms, numbers and model objects, to name a few.", price: 20.00, user: david_wylie)
+file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/doctor-man-rubber-duck-leaning.jpg')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 ruby = Duck.create(name: "Ruby", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://cdn.shopify.com/s/files/1/0604/4801/products/SG-REYTD-JCNYO_1024x1024_clipped_rev_1-min.jpeg?v=1568679251')
+java_script.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 puts "Finished!"
 
