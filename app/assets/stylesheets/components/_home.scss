@@ -4,19 +4,21 @@
   line-height: 1.42857143;
 }
 
-
-
 .container {
     padding-right: 20px;
     padding-left: 20px;
     margin: 30px auto;
     padding: 30px;
+      position: relative;
+  top: -40px;
+  right: 0;
+  left: 0px;
 }
 
-.value{
+.value {
   border-radius: 3px;
-  border: 1px solid rgb(240,240,240);
-  box-shadow: 1px 1px 1px 2px #0E6655;
+  border: 1px solid rgba(200,200,200, 0.2);
+  background-color: rgba(200,200,200, 0.2);
   margin: 30px;
   padding: 30px;
 }
@@ -39,9 +41,46 @@
     text-align: center;
 }
 
+h1{
+  position: relative;
+  top:-60px;
+  left: 170px;
+}
+
+.circle {
+  padding-top: 60px;
+  padding-left: 10px;
+  height: 170px;
+  width: 170px;
+  background-color: white;
+  border-style: solid;
+  border-color: rgb(250, 127, 45);
+  border-width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -220px;
+  left: 210px;
 
 
+}
 
 
+h4 {
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+}
 
+a {
+  color: black;
+  text-align: center;
+}
 
+a:hover{
+    color: rgba(50, 50, 50, 0.7);
+   text-decoration: none;
+}
+
+.color-orange {
+   color: rgb(254, 127, 45);
+}
