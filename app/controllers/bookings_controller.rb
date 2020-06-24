@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
     # @bookings = Booking.where(user: current_user)
+    
   end
 end
