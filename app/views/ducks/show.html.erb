@@ -1,3 +1,21 @@
 <h1>What a nice duck</h1>
 <%= @duck.name %>
 <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+
+<% if @booking%>
+  <%= simple_form_for [@booking, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+<% end %>
+
+
+
+<% @duck.reviews.each do |review| %>
+<% @review.rating.to_i.times do  %>
+ <span class="glyphicon glyphicon-star"></span>
+<% end %>
+  <li style="list-style: none; "><%= review.content %></li>
+  <li style="list-style: none;""><span class=”glyphicon glyphicon-star”></span><%= review.rating %></li>
+<% end %>
