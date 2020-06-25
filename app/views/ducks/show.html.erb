@@ -1,11 +1,33 @@
 <div class="container">
 <br>
-    <div class="card-product">
+  <div class="card-product">
     <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-product-infos">
-        <h2><strong><%= @duck.name %></strong></h2>
-        <p><%= @duck.description %></p>
-        <p><strong>Price: </strong> <%= @duck.price %></p>
+      <h2><strong><%= @duck.name %></strong></h2>
+      <p><%= @duck.description %></p>
+      <p><strong>Price: </strong> <%= @duck.price %></p>
     </div>
-    </div>
+  </div>
 </div>
+
+
+<div class="container">
+  <h4 style="color: orange; padding-top: 15px; ">Add a review</h4>
+  <% if @booking%>
+    <%= simple_form_for [@booking, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+  <% end %>
+  
+  <% @duck.reviews.each do |review| %>
+   <% @review.rating.to_i.times do  %>
+   <span class="glyphicon glyphicon-star"></span>
+  <% end %>
+   <li style="list-style: none; "><%= review.content %></li>
+   <li style="list-style: none;"><span class=”glyphicon glyphicon-star”></span><%= review.rating %></li>
+  <% end %>
+</div>
+
+<%= link_to "Booking", new_duck_booking_path(@duck) %>
