@@ -6,14 +6,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  get '/ducks', to: 'ducks#index'
-  get '/ducks/new', to: 'ducks#new'
-  post '/ducks', to: 'ducks#create'
-  post '/ducks/:id/bookings', to: 'bookings#create'
-  get '/ducks/:id', to: 'ducks#show', as: :duck
-  get '/dashboard', to: 'pages#dashboard'
+
+  resources :ducks do
+    resources :bookings, only: [:new, :create]
+    resources :reviews, only: :create
+  end
+
+  resources :bookings, only: [:index, :destroy]
 
 end
-
-
-
