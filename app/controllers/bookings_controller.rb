@@ -17,9 +17,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @duck = Duck.find(params[:duck_id])
     @booking.duck = @duck
-    @booking.user = curent_user
+    @booking.user = current_user
+    authorize @booking
     if @booking.save
-      redirect_to bookings_path
+      redirect_to bookings_path, notice: "Thank your for your booking #{@duck.name} "
     else
       render :new
     end
