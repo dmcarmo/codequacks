@@ -27,6 +27,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { initStarRating } from '../components/rating';
+import { typed } from'../components/typed';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:

@@ -31,21 +31,18 @@
 </div>
 
 
-<div class="container">
+<div class="container" >
   <h2 style=" text-align: center; padding-top: 15px;">Add a review</h2>
   <% if @booking%>
     <%= simple_form_for [@booking, @review] do |f| %>
-      <%= f.input :content %>
       <%= f.input :rating, collection: (1..5).to_a %>
+      <%= f.input :content %>
       <%= f.submit class: 'btn btn-primary' %>
     <% end %>
     <br>
   <% end %>
   <% @duck.reviews.each do |review| %>
-   <% @review.rating.to_i.times do  %>
-   <span class="glyphicon glyphicon-star"></span>
-  <% end %>
-   <li style="list-style: none; "><%= review.content %></li>
-   <li style="list-style: none;"><span class=”glyphicon glyphicon-star”></span><%= review.rating %></li>
+    <li style="list-style: none; "><%= "⭐️" * review.rating  if review.rating %></li>
+    <li style="list-style: none; "><%= review.content %></li>
   <% end %>
 </div>
