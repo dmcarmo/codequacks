@@ -7,13 +7,14 @@
   align-items: center;
   padding: 50px;
   flex: auto;
+  border-radius: 7px;
+  justify-content: space-between;
 }
 
 .card-product img {
   height: 100%;
   width: auto;
   object-fit: cover;
-  display: flex;
   border-radius: 7px;
 }
 
