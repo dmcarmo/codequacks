@@ -1,12 +1,25 @@
-
+<%# 
 <div class="container-fluid">
   <div class="row">
     <div class="col-8 offset-2">
-     <%= @duck.name %>
-     <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
-     <%= link_to "Booking", new_duck_booking_path(@duck) %>
+     
+    </div>
+  </div>
+</div> %>
 
-     <% if policy(@duck).edit? %>
+<div class="container">
+<br>
+  <div class="card-product">
+    <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card-product-infos">
+      <h2><strong><%= @duck.name %></strong></h2>
+      <p><%= @duck.description %></p>
+      <p><strong>Price: </strong> <%= @duck.price %></p>
+      <div class="btn btn-primary">
+      <%= link_to "Book This Duck", new_duck_booking_path(@duck) %>
+       
+      </div>
+      <% if policy(@duck).edit? %>
         <%= link_to "Edit", edit_duck_path(@duck) %>
       <% end %>
 
@@ -17,35 +30,19 @@
   </div>
 </div>
 
-<div class="container">
-<br>
-  <div class="card-product">
-    <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
-    <div class="card-product-infos">
-      <h2><strong><%= @duck.name %></strong></h2>
-      <p><%= @duck.description %></p>
-      <p><strong>Price: </strong> <%= @duck.price %></p>
-    </div>
-  </div>
-</div>
 
-
-<div class="container">
+<div class="container" >
   <h2 style=" text-align: center; padding-top: 15px;">Add a review</h2>
   <% if @booking%>
     <%= simple_form_for [@booking, @review] do |f| %>
-      <%= f.input :content %>
       <%= f.input :rating, collection: (1..5).to_a %>
+      <%= f.input :content %>
       <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
-       <br>
+    <% end %>
+    <br>
   <% end %>
-
-<% @duck.reviews.each do |review| %>
-  <li style="list-style: none; "><%= review.content %></li>
-  <li style="list-style: none; "><%= "⭐️" * review.rating  if review.rating %></li>
-<% end %>
-
+  <% @duck.reviews.each do |review| %>
+    <li style="list-style: none; "><%= "⭐️" * review.rating  if review.rating %></li>
+    <li style="list-style: none; "><%= review.content %></li>
+  <% end %>
 </div>
-<div class="btn-2"> <%= link_to "Go back to Bookings", new_duck_booking_path(@duck) %></div>
-
