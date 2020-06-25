@@ -56,10 +56,10 @@ booking_5 = Booking.create(user: david_carmo, duck: html, start_time: DateTime.s
 
 
 puts "Creating reviews..."
-review_1 = Review.create(user: isaline, booking: booking_1, content: "I play with this duck and my cat every night for one year.")
-review_2 = Review.create(user: david_wylie, booking: booking_2, content: "As a wife and mother, I LOVE this duck. It keeps me in my place, allows me to get dinner ready on time, AND only costs 72 percent more than other ducks.")
-review_3 = Review.create(user: david_carmo, booking: booking_3, content: "Serves as a wonderful pet and a delicious snack")
-review_4 = Review.create(user: sylvia, booking: booking_4, content: "Really takes my breath away")
-review_5 = Review.create(user: david_carmo, booking: booking_5, content: "Very nice addition to the living room")
+review_1 = Review.create(booking: booking_1, rating: 4, content: "I play with this duck and my cat every night for one year.")
+review_2 = Review.create(booking: booking_2, rating: 5, content: "As a wife and mother, I LOVE this duck. It keeps me in my place, allows me to get dinner ready on time, AND only costs 72 percent more than other ducks.")
+review_3 = Review.create(booking: booking_3, rating: 4, content: "Serves as a wonderful pet and a delicious snack")
+review_4 = Review.create(booking: booking_4, rating: 5, content: "Really takes my breath away")
+review_5 = Review.create(booking: booking_5, rating: 3, content: "Very nice addition to the living room")
 
 puts "Finished!"
