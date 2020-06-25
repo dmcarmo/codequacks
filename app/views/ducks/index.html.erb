@@ -1,15 +1,22 @@
+<div class="container">
+<br>
+  <div class="row">
+   <% @ducks.each do |duck| %>
+        <%= link_to duck_path(duck) do %>    
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"> <strong><%= duck.name %></strong> </h5>
+                <%= cl_image_tag duck.photo.key, height: 300, width: 250, crop: :fill %>
+                <p class="card-text"><strong>Price: </strong> <%= duck.price %>€</p>
+                <a href="#" class="btn btn-primary">Book A Duck</a>
+              </div>
+            </div>
+          </div>
+        <% end %>  
+    <% end %>
+  </div>
+</div>
+<br>
+<br>
 
-<% @ducks.each do |duck| %>
-  <%= link_to duck_path(duck) do %>
-    <div class="duck-card">
-      <%= cl_image_tag duck.photo.key, height: 300, width: 250, crop: :fill %>
-      <div class="duck-card-info">
-        <h2>Duck Name <%= duck.name %></h2>
-        <p>Description <%= duck.description %></p>
-        <p>Price <%= duck.price %></p>
-        <p>User <%= duck.user.email %></p>
-        <p>About <%= time_ago_in_words duck.created_at %> ago </p>
-      </div>
-    </div>
-  <% end %>
-<% end %>

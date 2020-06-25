@@ -1,0 +1,37 @@
+.card-product {
+  overflow: hidden;
+  height: auto;
+  background: $light-gray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  flex: auto;
+}
+
+.card-product img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: flex;
+  border-radius: 7px;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 16px;
+  font-family: Work Sans, Helvetica, sans-serif;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}

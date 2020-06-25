@@ -1,3 +1,11 @@
-<h1>What a nice duck</h1>
-<%= @duck.name %>
-<%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+<br>
+    <div class="card-product">
+    <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card-product-infos">
+        <h2><strong><%= @duck.name %></strong></h2>
+        <p><%= @duck.description %></p>
+        <p><strong>Price: </strong> <%= @duck.price %></p>
+    </div>
+    </div>
+</div>
