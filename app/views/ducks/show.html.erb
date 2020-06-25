@@ -1,3 +1,12 @@
+<%# 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 offset-2">
+     
+    </div>
+  </div>
+</div> %>
+
 <div class="container">
 <br>
   <div class="card-product">
@@ -6,6 +15,17 @@
       <h2><strong><%= @duck.name %></strong></h2>
       <p><%= @duck.description %></p>
       <p><strong>Price: </strong> <%= @duck.price %></p>
+      <div class="btn btn-primary">
+      <%= link_to "Book This Duck", new_duck_booking_path(@duck) %>
+       
+      </div>
+      <% if policy(@duck).edit? %>
+        <%= link_to "Edit", edit_duck_path(@duck) %>
+      <% end %>
+
+      <% if policy(@duck).destroy? %>
+        <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -26,7 +46,3 @@
     <li style="list-style: none; "><%= review.content %></li>
   <% end %>
 </div>
-<div class="btn-2"> <%= link_to "Go back to Bookings", new_duck_booking_path(@duck) %></div>
-
-
-
