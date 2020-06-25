@@ -1,5 +1,4 @@
 class DucksController < ApplicationController
-
   # include Pundit
 
   skip_before_action :authenticate_user!, only: [:index]
@@ -7,9 +6,11 @@ class DucksController < ApplicationController
   before_action :set_duck, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :destroy]
 
-
   def index
     @ducks = policy_scope(Duck).order(name: :asc)
+    if params[:search].present?
+      @ducks = Duck.global_search(params[:search])
+    end
   end
 
   def show
