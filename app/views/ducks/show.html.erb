@@ -32,15 +32,15 @@
 
 
 <div class="container">
-  <h4 style="color: orange; padding-top: 15px; ">Add a review</h4>
+  <h2 style=" text-align: center; padding-top: 15px;">Add a review</h2>
   <% if @booking%>
     <%= simple_form_for [@booking, @review] do |f| %>
       <%= f.input :content %>
-      <%= f.input :rating %>
+      <%= f.input :rating, collection: (1..5).to_a %>
       <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+    <% end %>
+    <br>
   <% end %>
-  
   <% @duck.reviews.each do |review| %>
    <% @review.rating.to_i.times do  %>
    <span class="glyphicon glyphicon-star"></span>
