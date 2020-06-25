@@ -1,3 +1,22 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 offset-2">
+     <%= @duck.name %>
+     <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+     <%= link_to "Booking", new_duck_booking_path(@duck) %>
+
+     <% if policy(@duck).edit? %>
+        <%= link_to "Edit", edit_duck_path(@duck) %>
+      <% end %>
+
+      <% if policy(@duck).destroy? %>
+        <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 <br>
   <div class="card-product">
@@ -30,4 +49,6 @@
   <% end %>
 </div>
 
-<%= link_to "Booking", new_duck_booking_path(@duck) %>
+
+
+
