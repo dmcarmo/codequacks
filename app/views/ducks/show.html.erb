@@ -1,3 +1,5 @@
 <h1>What a nice duck</h1>
 <%= @duck.name %>
 <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
+
+<%= link_to "Booking", new_duck_booking_path(@duck) %>
