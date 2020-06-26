@@ -7,10 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
+puts "Destroying reviews..."
 Review.destroy_all
+puts "Destroying bookings..."
 Booking.destroy_all
+puts "Destroying ducks..."
 Duck.destroy_all
+puts "Destroying users..."
 User.destroy_all
+puts "Finished!"
 
 puts "Creating users..."
 david_carmo = User.create(email: "david_carmo@email.com", password: "pull-requests")
@@ -54,6 +59,7 @@ booking_3 = Booking.create(user: david_carmo, duck: rails, start_time: DateTime.
 booking_4 = Booking.create(user: sylvia, duck: css, start_time: DateTime.strptime("08/12/2023 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/12/2023 5:00", "%d/%m/%Y %H:%M"), total_cost: 75)
 booking_5 = Booking.create(user: david_carmo, duck: html, start_time: DateTime.strptime("06/8/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/9/2020 3:00", "%d/%m/%Y %H:%M"), total_cost: 75)
 
+puts "Finished!"
 
 puts "Creating reviews..."
 review_1 = Review.create(booking: booking_1, rating: 4, content: "I play with this duck and my cat every night for one year.")
