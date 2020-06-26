@@ -30,25 +30,54 @@ java_script = Duck.create(name: "Java Script", description: "Useful javascript f
 file = URI.open('https://assets.onbuy.com/i26/product/f681eec013ce4742a40ec97d8e24a9b9-m502897/sunny-cool-sunglasses-rubber-duck-fun-pool-or-bath-toy.jpg')
 java_script.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/jpg')
 
-database = Duck.create(name: "Database", description: "A helper class to manage database creation and version management. You create a subclass implementing onCreate(SQLiteDatabase.", price: 10.00, user: isaline)
+database = Duck.create(name: "Database Duck", description: "A helper class to manage database creation and version management. You create a subclass implementing onCreate(SQLiteDatabase.", price: 10.00, user: isaline)
 file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2017/07/Trump-rubber-duck-Amsterdam-Duck-Store.jpg')
 database.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
 
-css = Duck.create(name: "CSS", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use CSS", price: 15.00, user: sylvia)
+css = Duck.create(name: "CSS Superwoman", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use CSS", price: 15.00, user: sylvia)
 file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/superwoman-rubber-duck-leaning.jpg')
 css.photo.attach(io: file, filename: 'nes3.png', content_type: 'image/png')
 
-html = Duck.create(name: "HTML", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML", price: 15.00, user: david_carmo)
+html = Duck.create(name: "HTML Writer", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML", price: 15.00, user: david_carmo)
 file = URI.open('https://smhttp-ssl-79234.nexcesscdn.net/pub/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/vender-PL/17138/RD140-YEL_ab-prime_item_9.jpg')
 html.photo.attach(io: file, filename: 'nes4.png', content_type: 'image/png')
 
-rails = Duck.create(name: "Rails", description: "The Rails framework provides a large number of helpers for working with assets, dates, forms, numbers and model objects, to name a few.", price: 20.00, user: david_wylie)
+rails = Duck.create(name: "Dr. Ruby on Rails", description: "The Rails framework provides a large number of helpers for working with assets, dates, forms, numbers and model objects, to name a few.", price: 20.00, user: david_wylie)
 file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/doctor-man-rubber-duck-leaning.jpg')
 rails.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
 
-ruby = Duck.create(name: "Ruby", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+ruby = Duck.create(name: "Ruby Diver", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
 file = URI.open('https://cdn.shopify.com/s/files/1/0604/4801/products/SG-REYTD-JCNYO_1024x1024_clipped_rev_1-min.jpeg')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+php = Duck.create(name: "PHP Teacher", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://cdn11.bigcommerce.com/s-nf2x4/images/stencil/1280x1280/products/617/10155/Teacher-Female-Star-Rubber-Duck-DITW-3__58501.1568745303.jpg?c=2&imbypass=on')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+python = Duck.create(name: "Phyton Bagpiper", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://www.nationalgalleries.org/sites/default/files/product_images/bagpiper3.jpg')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+node = Duck.create(name: "Prof. Node", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://s3.distributorcentral.com/uploads/7/D/7DE4346F10E829665D56058B8B92FBE3.jpg')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+swift = Duck.create(name: "Swift Experte", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://i.ebayimg.com/images/g/CqwAAOSwXI1eQdnW/s-l640.jpg')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+c++ = Duck.create(name: "C++ Police", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/040TB-London-Rubber-Ducks---Policeman_1024x.jpg?v=1549638278')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+java = Duck.create(name: "Java in French", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://lilalu-shop.com/media/image/9b/95/64/lilalu-quietscheente-rubber-duck-franzose-rotwein-baguette-french-wine-seine-eifelturm-eifel-tower_600x600.jpg')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
+github = Duck.create(name: "Github Explorer", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+file = URI.open('https://www.duckshop.com/shop_cfg/rubberducks/Badeente-5165_1_.JPG')
+ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
+
 
 puts "Finished!"
 
