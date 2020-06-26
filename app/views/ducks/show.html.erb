@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 30px;">
+<div class="container" style="margin-top: 15px;">
 <br>
   <div class="card-product">
     <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
@@ -23,7 +23,7 @@
       <% end %>
       <% if policy(@duck).destroy? %>
         <div class="btn btn-primary">
-          <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: "Are you sure you wanna destroy #{@duck.name}?" } %>
         </div>
       <% end %>
     </div>
