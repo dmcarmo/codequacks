@@ -12,7 +12,7 @@
     <div class="card-product-infos">
       <h2><strong><%= @duck.name %></strong></h2>
       <p><%= @duck.description %></p>
-      <p><strong>Price per day: </strong> <%= @duck.price %></p>
+      <p><strong>Price per day: </strong> <%= @duck.price %>€</p>
       <div class="btn btn-primary">
         <%= link_to "Book This Duck", new_duck_booking_path(@duck) %>
       </div>
