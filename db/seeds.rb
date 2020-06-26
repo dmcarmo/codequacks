@@ -46,7 +46,7 @@ rails = Duck.create(name: "Dr. Ruabbi O'Railly", description: "The Rails framewo
 file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/doctor-man-rubber-duck-leaning.jpg')
 rails.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
 
-ruby = Duck.create(name: "Albert Nodestein", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+ruby = Duck.create(name: "Albert Nodestein", description: "The definition of insanity is doing the same thing over and over again, but expecting different results...so put in a ticket you fool!", price: 30.00, user: david_wylie)
 file = URI.open('https://cdn.shopify.com/s/files/1/0604/4801/products/SG-REYTD-JCNYO_1024x1024_clipped_rev_1-min.jpeg')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 
@@ -66,7 +66,7 @@ swift = Duck.create(name: "Swift Experte", description: "This is a small Ruby tu
 file = URI.open('https://i.ebayimg.com/images/g/CqwAAOSwXI1eQdnW/s-l640.jpg')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 
-c++ = Duck.create(name: "PoliC++e Duck", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+c = Duck.create(name: "PoliC++e Duck", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
 file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/040TB-London-Rubber-Ducks---Policeman_1024x.jpg?v=1549638278')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 
