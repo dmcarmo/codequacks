@@ -23,7 +23,7 @@
       <% end %>
       <% if policy(@duck).destroy? %>
         <div class="btn btn-primary">
-          <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: "Are you sure you wanna destroy #{@duck.name}?" } %>
         </div>
       <% end %>
     </div>
