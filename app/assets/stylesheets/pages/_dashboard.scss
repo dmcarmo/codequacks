@@ -5,7 +5,7 @@
 .profile {
   padding-top: 60px;
   padding-left: 12px;
-  margin-bottom: none;
+  margin-bottom: -50px;
   height: 200px;
   width: 200px;
   background-image: url("https://i.pinimg.com/originals/7f/a7/ee/7fa7eea46c950a20b4b6324ec839327f.jpg");
@@ -17,6 +17,7 @@
   position: relative;
   top: -110px;
   left: 430px;
+
 }
 
 .profile:hover {
@@ -25,7 +26,7 @@
 
 .card-profile {
   overflow: hidden;
-  height: 2 00px;
+  height: 200px;
   width: 300px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -36,17 +37,21 @@
 
 .card-product {
   overflow: hidden;
+  padding-left: none;
+  margin-right: 20px;
   height: 200px;
-  width: 600px;
+  width: 500px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .card-product img {
   height: 200%;
   width: 200px;
+  margin-left: none;
   object-fit: cover;
 }
 
@@ -68,3 +73,4 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+

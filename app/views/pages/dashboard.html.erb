@@ -5,29 +5,31 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="padding-top: -50px; ">
   <div style="font-size: 32px; color:white;" class="profile"></div>
   <h4> My ducks </h4>
-  <div class="card-product">
+  <br>
+  <br>
+   <div class="row">
     <% @ducks.each do |duck| %>
-      <%= cl_image_tag duck.photo.key, height: 300, width: 250, crop: :fill %>
-    <div class="card-product-infos">
-        <h2><%= duck.name %></h2>
-        <p><%= duck.description %></p>
-        <p><strong>Price:</strong> <%= duck.price %></p>
-        <br>
-        <div class="right">
-          <div class="align">
-            <%= link_to edit_duck_path(duck) do %>
-              <i class="fas fa-pencil-alt" style= "color: orange"></i>
-            <% end %>
-            <%= link_to duck_path(duck), method: :delete, data: { confirm: 'Are you sure?' } do  %>
-              <i class="fas fa-trash-alt" style= "color: orange"></i>
-            <% end %>
+      <div class="col-sm-12 col-md-6">
+        <div class="card-product">
+          <%= cl_image_tag duck.photo.key, height: 300, width: 250, crop: :fill %>
+            <div class="card-product-infos">
+              <h2 style="text-align: left; padding-left: 10px;"><%= duck.name %></h2>
+              <p style="text-align: left; padding-left: 10px;"><%= duck.description %></p>
+              <p style="text-align: left; padding-left: 10px;"><strong>Price:</strong> <%= duck.price %></p>
+              <br>
+              <%= link_to edit_duck_path(duck) do %>
+                <i class="fas fa-pencil-alt" style= "padding: 10px; color: orange"></i>
+              <% end %>
+              <%= link_to duck_path(duck), method: :delete, data: { confirm: 'Are you sure?' } do  %>
+                <i class="fas fa-trash-alt" style= "color: orange"></i>
+              <% end %>
+            </div>
         </div>
+      </div>
     <% end %>
-    </div>
   </div>
-</div>
 </div>
 
