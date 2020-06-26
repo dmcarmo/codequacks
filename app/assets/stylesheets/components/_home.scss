@@ -5,11 +5,11 @@
 }
 
 .container {
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 30px auto;
-    padding: 30px;
-      position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 30px auto;
+  padding: 30px;
+  position: relative;
   top: -40px;
   right: 0;
   left: 0px;
@@ -26,6 +26,7 @@
 .title-value {
   text-align: center;
   margin: 15px 10px;
+  padding-left: 0px;
 }
 
 .untertitel-value h4 {
@@ -36,16 +37,23 @@
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
-    text-align: center;
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+}
+
+.no-padding-left {
+  padding-left: 0px;
 }
 
 h1{
-  position: relative;
-  top:-60px;
-  left: 170px;
   color: rgba(250, 250, 250, 1);
+}
+
+.white-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
@@ -58,22 +66,13 @@ h1{
   border-color: white;
   border-width: 23px;
   border-radius: 50%;
-  display: inline-block;
   position: relative;
-  top: -220px;
-  left: 200px;
-
+  top: -190px;
 }
 
-
-
-
-
-
-
 @keyframes bounce {
-  from{ transform: translate3d(0, 0, 0);     }
-  to   { transform: translate3d(0, 260px, 0); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 260px, 0); }
 }
 
 h4 {
@@ -87,10 +86,10 @@ a {
 }
 
 a:hover{
-    color: rgba(50, 50, 50, 0.7);
-   text-decoration: none;
+  color: rgba(50, 50, 50, 0.7);
+  text-decoration: none;
 }
 
 .color-orange {
-   color: rgb(254, 127, 45);
+  color: rgb(254, 127, 45);
 }
