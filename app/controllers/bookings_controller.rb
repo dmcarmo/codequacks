@@ -1,10 +1,14 @@
 class BookingsController < ApplicationController
 
-
+  before_action :set_booking, only: [:show]
 
   def index
     @bookings = policy_scope(Booking)
-    # @bookings = Booking.where(user: current_user)
+    @bookings = Booking.where(user: current_user)
+  end
+
+  def show
+    authorize @booking
   end
 
   def new
@@ -20,7 +24,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to bookings_path, notice: "Thank your for your booking #{@duck.name} "
+      redirect_to bookings_path, notice: "Thank your for your booking #{@duck.name}"
     else
       render :new
     end
