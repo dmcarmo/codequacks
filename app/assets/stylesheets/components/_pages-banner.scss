@@ -1,0 +1,40 @@
+.pages-banner {
+  background-size: cover;
+  background-image: image-url('duckbanner3.jpg');
+  background-color: rgba(50, 50, 50, 1);
+  background-position: center;
+  padding: 80px 0;
+  height: 250px;
+  border-top-color: white;
+}
+
+.pages-banner h1 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.pages-banner p {
+  font-size: 30px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.pages-banner-content {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  justify-content-center: center;
+}
+
+.pages-banner1 {
+  background-size: cover;
+  background-image: image-url('duckbanner2.jpg');
+  background-color: rgba(50, 50, 50, 1);
+  background-position: center;
+  padding: 80px 0;
+  height: 250px;
+  border-top-color: white;
+}
