@@ -5,7 +5,6 @@
   border-radius: 7px;
   border-style: solid;
   border-width: 2px;
-
 }
 
 .container {
@@ -16,12 +15,42 @@
   margin: auto;
   padding-bottom: 30px;
   box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
-  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
-  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  // box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  // box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
   background-color: #F4F4F4;
   border-image-slice: 1;
   border-width: 1px;
   border-image-source: linear-gradient(to left, #ffffff, #ffffff);
+}
+
+.box-span {
+  display: flex;
+  justify-content: center;
+}
+
+/* Shadows are visible under slightly transparent text color */
+span {
+  border-top:1px solid #6c5c5d;
+  margin-top:10px;
+  margin-bottom: 10px;
+  padding: 9px 15px 9px 15px;
+  line-height:34px;
+  font-size:15px;
+  background: linear-gradient(to bottom, #31221f, #030000);
+  color:#c3bcb6;
+  font-family:sans-serif;
+  text-shadow:
+    -1px -1px 0 #030000,
+    1px -1px 0 #030000,
+    -1px 1px 0 #030000,
+    1px 1px 0 #030000,
+    0 0 4px #fff;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-family:courier;
+  font-weight:bold;
+  position:relative;
+  top:-10px;
 }
 
 h3 {
@@ -31,50 +60,21 @@ h3 {
   font-family: 'Krona One', sans-serif;
 }
 
-    /* Shadows are visible under slightly transparent text color */
-  span {
-    border-top:1px solid #6c5c5d;
-    margin-left: 200px;
-    margin-top:10px;
-    margin-bottom: 10px;
-    padding:7px 15px 9px 15px;
-    line-height:34px;
-    font-size:15px;
-    background: linear-gradient(to bottom, #31221f, #030000);
-    color:#c3bcb6;
-    font-family:sans-serif;
-    text-shadow:
-        -1px -1px 0 #030000,
-        1px -1px 0 #030000,
-        -1px 1px 0 #030000,
-        1px 1px 0 #030000,
-        0 0 4px #fff;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    font-family:courier;
-    font-weight:bold;
-    position:relative;
-    top:-10px;
-    left: 120px;
-}
-
-div{
-    padding-left:20px;
-}
-
 h5 {
   font-family: 'Krona One', sans-serif;
-
 }
 
 h6 {
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 
-.body-bookings {
-  background-image: url("https://images.assetsdelivery.com/compings_v2/iunewind/iunewind1602/iunewind160200039.jpg");
-  background-size: 1000px 700px;
-}
+// .body-bookings {
+//   background-image: url("https://images.assetsdelivery.com/compings_v2/iunewind/iunewind1602/iunewind160200039.jpg");
+//   background-size: 1000px 700px;
+// }
 
 .btn {
   border-color: rgb(254, 127, 45);
@@ -92,6 +92,4 @@ h6 {
 
 .box-shadow {
   box-shadow: -2px 15px 4px -11px rgba(0,0,0,0.42);
-  box-shadow: -2px 15px 4px -11px rgba(0,0,0,0.42);
 }
-

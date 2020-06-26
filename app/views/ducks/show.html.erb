@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 30px;">
 <br>
   <div class="card-product">
     <%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>
@@ -14,15 +14,17 @@
       <p><%= @duck.description %></p>
       <p><strong>Price per day: </strong> <%= @duck.price %></p>
       <div class="btn btn-primary">
-      <%= link_to "Book This Duck", new_duck_booking_path(@duck) %>
-       
+        <%= link_to "Book This Duck", new_duck_booking_path(@duck) %>
       </div>
       <% if policy(@duck).edit? %>
-        <%= link_to "Edit", edit_duck_path(@duck) %>
+        <div class="btn btn-primary">
+          <%= link_to "Edit", edit_duck_path(@duck) %>
+        </div>
       <% end %>
-
       <% if policy(@duck).destroy? %>
-        <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="btn btn-primary">
+          <%= link_to "Destroy", duck_path(@duck), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
       <% end %>
     </div>
   </div>
