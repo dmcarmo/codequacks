@@ -1,0 +1,70 @@
+.dashboard-banner {
+
+}
+
+.profile {
+  padding-top: 60px;
+  padding-left: 12px;
+  margin-bottom: none;
+  height: 200px;
+  width: 200px;
+  background-image: url("https://i.pinimg.com/originals/7f/a7/ee/7fa7eea46c950a20b4b6324ec839327f.jpg");
+  background-size: 200px 200px;
+  border-style: solid;
+  border-color: white;
+  border-width: 10px;
+  border-radius: 50%;
+  position: relative;
+  top: -110px;
+  left: 430px;
+}
+
+.profile:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.card-profile {
+  overflow: hidden;
+  height: 2 00px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+ margin: auto;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  width: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 200%;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  width: 300px;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
