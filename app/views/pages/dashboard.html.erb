@@ -1,0 +1,33 @@
+<div class="pages-banner d-flex justify-content-center" style="height: 400px;">
+  <div class="pages-banner-content">
+    <div class="pages-white-box">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div style="font-size: 32px; color:white;" class="profile"></div>
+  <h4> My ducks </h4>
+  <div class="card-product">
+    <% @ducks.each do |duck| %>
+      <%= cl_image_tag duck.photo.key, height: 300, width: 250, crop: :fill %>
+    <div class="card-product-infos">
+        <h2><%= duck.name %></h2>
+        <p><%= duck.description %></p>
+        <p><strong>Price:</strong> <%= duck.price %></p>
+        <br>
+        <div class="right">
+          <div class="align">
+            <%= link_to edit_duck_path(duck) do %>
+              <i class="fas fa-pencil-alt" style= "color: orange"></i>
+            <% end %>
+            <%= link_to duck_path(duck), method: :delete, data: { confirm: 'Are you sure?' } do  %>
+              <i class="fas fa-trash-alt" style= "color: orange"></i>
+            <% end %>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
