@@ -66,7 +66,7 @@ swift = Duck.create(name: "Swift Experte", description: "This is a small Ruby tu
 file = URI.open('https://i.ebayimg.com/images/g/CqwAAOSwXI1eQdnW/s-l640.jpg')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 
-c++ = Duck.create(name: "C++ Police", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
+cpp = Duck.create(name: "C++ Police", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
 file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/040TB-London-Rubber-Ducks---Policeman_1024x.jpg?v=1549638278')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 
