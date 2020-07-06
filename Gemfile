@@ -31,7 +31,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # gem 'image_processing', '~> 1.2'
 
 # Use Cloudinary
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
