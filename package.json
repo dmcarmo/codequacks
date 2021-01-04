@@ -15,6 +15,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "node-forge": ">=0.10.0",
     "serialize-javascript": ">=3.1.0",
     "webpack-dev-server": "^3.11.0"
   }
