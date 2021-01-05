@@ -23,3 +23,32 @@
 #navbar-right {
   justify-content: flex-end;
 }
+
+#title-header {
+  display: flex;
+  justify-content: center;
+}
+
+.title-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  width: 260px;
+  background-color: rgba(255,218,69, 1);
+  border-style: solid;
+  border-color: white;
+  border-width: 23px;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+}
+
+.title-circle p {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}

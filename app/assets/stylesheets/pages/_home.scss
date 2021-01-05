@@ -1,16 +1,80 @@
-// Specific CSS for your home-page
-.white-box {
-  display: flex;
-  padding: 0px;
-}
-.ball {
-  display: flex;
-  padding: 0px;
+
+.body {
+  font-size: 14px;
+  line-height: 1.42857143;
 }
 
-.circle {
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 30px auto;
+  padding: 30px;
+  position: relative;
+  top: -40px;
+  right: 0;
+  left: 0px;
+}
+
+.value {
+  border-radius: 3px;
+  border: 1px solid rgba(200,200,200, 0.2);
+  background-color: rgba(200,200,200, 0.2);
+  margin: 30px;
+  padding: 30px;
+}
+
+.title-value {
+  text-align: center;
+  margin: 15px 10px;
+  padding-left: 0px;
+}
+
+.untertitel-value h4 {
+  text-align: center;
+  margin: 15px 10px;
+  color: gb(240,240,240);
+  text-decoration: none;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  text-align: center;
+}
+
+.no-padding-left {
+  padding-left: 0px;
+}
+
+h1{
+  color: rgba(250, 250, 250, 1);
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 260px, 0); }
+}
+
+h4 {
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-align: center;
+}
+
+a:hover{
+  color: rgba(50, 50, 50, 0.7);
+  text-decoration: none;
+}
+
+.color-orange {
+  color: rgb(254, 127, 45);
+}
+
+.ball {
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0px;
 }
