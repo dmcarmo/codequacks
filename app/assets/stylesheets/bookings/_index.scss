@@ -38,8 +38,7 @@ span {
   font-size:15px;
   background: linear-gradient(to bottom, #31221f, #030000);
   color:#c3bcb6;
-  font-family:sans-serif;
-  text-shadow:
+    text-shadow:
     -1px -1px 0 #030000,
     1px -1px 0 #030000,
     -1px 1px 0 #030000,
@@ -47,7 +46,6 @@ span {
     0 0 4px #fff;
   letter-spacing:3px;
   text-transform:uppercase;
-  font-family:courier;
   font-weight:bold;
   position:relative;
   top:-10px;
@@ -57,11 +55,10 @@ h3 {
   text-align: center;
   padding-left: 30px;
   color: orange;
-  font-family: 'Krona One', sans-serif;
 }
 
 h5 {
-  font-family: 'Cabin', sans-serif;
+  font-size: 28px;
 }
 
 h6 {
