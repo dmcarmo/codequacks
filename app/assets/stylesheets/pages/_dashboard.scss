@@ -1,29 +1,19 @@
-.dashboard-banner {
-
+.container {
+  padding-top: -50px;
 }
 
 .profile {
-  padding-top: 60px;
-  padding-left: 12px;
-  margin-bottom: -50px;
   height: 200px;
   width: 200px;
   background-image: url("https://i.pinimg.com/originals/7f/a7/ee/7fa7eea46c950a20b4b6324ec839327f.jpg");
-  background-size: 200px 200px;
+  background-size: cover;
   border-style: solid;
   border-color: white;
   border-width: 10px;
   border-radius: 50%;
-  position: relative;
-  top: -110px;
-  left: 430px;
-
+  margin-top: -75px;
 }
-
-.profile:hover {
-  background-color: rgba(50, 50, 50, 0.5);
-}
-
+// If we don't display the bookings then the following can be deleted
 .card-profile {
   overflow: hidden;
   height: 200px;
@@ -43,7 +33,6 @@
   width: 600px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
 
 .card-product img {
@@ -71,4 +60,3 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-
