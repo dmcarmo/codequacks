@@ -87,7 +87,7 @@ java.photo.attach(io: file, filename: 'nes12.png', content_type: 'image/png')
 java.save!
 
 github = Duck.new(name: "Github Explorer", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://www.duckshop.com/shop_cfg/rubberducks/Badeente-5165_1_.JPG')
+file = URI.open('https://www.duckshop.de/media/image/4a/62/f9/Badeente_Taucher_62491881.jpg')
 github.photo.attach(io: file, filename: 'nes13.png', content_type: 'image/png')
 github.save!
 
