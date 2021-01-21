@@ -32,13 +32,6 @@
   padding-left: 0px;
 }
 
-.untertitel-value h4 {
-  text-align: center;
-  margin: 15px 10px;
-  color: gb(240,240,240);
-  text-decoration: none;
-}
-
 .no-padding-left {
   padding-left: 0px;
 }
@@ -50,10 +43,6 @@ h1{
 @keyframes bounce {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(0, 260px, 0); }
-}
-
-h4 {
-  text-align: center;
 }
 
 a {
