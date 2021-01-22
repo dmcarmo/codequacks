@@ -5,17 +5,17 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 15px;">
+<div class="container">
 <br>
   <div class="row">
     <% @ducks.each do |duck| %>
       <div class="col-md-6 d-flex">
         <div class="card card-body justify-content-between">
           <%= link_to duck_path(duck) do %>
-          <h5 class="card-title"> <strong><%= duck.name %></strong> </h5>
-          <%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %>
-          <p class="card-text"><strong>Price per day: </strong> <%= duck.price %>€</p>
-          <a href="#" class="btn btn-primary w-40 align-self-center">Book A Duck</a>
+            <h5 class="card-title"><strong><%= duck.name %></strong></h5>
+            <%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %>
+            <p class="card-text"><strong>Price per day: </strong> <%= duck.price %>€</p>
+            <a href="#" class="btn btn-primary w-40 align-self-center">Book A Duck</a>
           <% end %>
         </div>
       </div>
