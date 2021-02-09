@@ -5,16 +5,16 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container mt-3">
 <br>
   <div class="row">
     <% @ducks.each do |duck| %>
       <%= render "ducks/show", duck: duck %>
       <div class="col-md-6 d-flex">
-        <div class="card card-body justify-content-between">
-          <div data-toggle="modal" data-target="#duckModal<%= duck.id %>">
+        <div class="card card-body">
+          <div class="d-flex flex-column h-100 justify-content-between" data-toggle="modal" data-target="#duckModal<%= duck.id %>">
             <h5 class="card-title"><strong><%= duck.name %></strong></h5>
-            <%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %>
+            <p><%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %></p>
             <p class="card-text"><strong>Price per day:</strong> <%= duck.price %>€</p>
             <a href="#" class="btn btn-primary w-40 align-self-center">Book A Duck</a>
           </div>
