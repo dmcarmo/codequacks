@@ -1,0 +1,26 @@
+.container {
+  padding-top: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 10px;
+  margin: auto;
+  padding-bottom: 30px;
+  box-shadow: 1px 2px 31px -18px rgba(148,148,148,1);
+  background-color: #F4F4F4;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to left, #ffffff, #ffffff);
+}
+
+.container-title {
+  width: fit-content;
+  text-align: center;
+  position:relative;
+  top:-10px;
+  margin-bottom: 30px;
+  border: 2px;
+  border-radius: 3px;
+  padding: 9px 15px 9px 15px;
+  background: white;
+  font-weight:bold;
+}

@@ -1,0 +1,45 @@
+<div class="modal fade" id="duckModal<%= duck.id %>" tabindex="-1" role="dialog" aria-labelledby="duckModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center" id="duckModalCenterTitle"><%= duck.name %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= cl_image_tag duck.photo.key, height: 400, width: 330, crop: :fill %>
+        <p class="pt-3"><%= duck.description %></p>
+        <p><strong>Price per day: </strong> <%= duck.price %>€</p>
+        <div class="btn btn-primary">
+          <%= link_to "Book This Duck", new_duck_booking_path(duck) %>
+        </div>
+        <% if policy(duck).edit? %>
+          <div class="btn btn-primary">
+            <%= link_to "Edit", edit_duck_path(duck) %>
+          </div>
+        <% end %>
+        <% if policy(duck).destroy? %>
+          <div class="btn btn-primary">
+            <%= link_to "Destroy", duck_path(duck), method: :delete, data: { confirm: "Are you sure you wanna destroy #{duck.name}?" } %>
+          </div>
+        <% end %>
+        <h2 class="pt-3">Add a review</h2>
+        <% if @booking%>
+          <%= simple_form_for [@booking, @review] do |f| %>
+            <%= f.input :rating, collection: (1..5).to_a %>
+            <%= f.input :content %>
+            <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
+          <br>
+        <% end %>
+        <% duck.reviews.each do |review| %>
+          <dl><%= "⭐️" * review.rating  if review.rating %></dl>
+          <dl><%= review.content %></dl>
+        <% end %>        
+      </div>
+      <div class="modal-footer justify-content-around">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

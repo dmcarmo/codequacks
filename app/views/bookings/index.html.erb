@@ -5,11 +5,10 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 15px;">
-  <div class="box-span"><span class="box-shadow">Here are your Duck Bookings</span></div>
-<br>
-<br>
-
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="container-title shadow bg-white rounded">Here are your Duck Bookings</div>
+  </div>
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="col-md-4">
@@ -36,6 +35,4 @@
     <% end %>
   </div>
 </div>
-<h4><%= link_to "Book another duck!", ducks_path %></h4>
-<br>
-<br>
+<p class="text-center"><%= link_to "Book another duck!", ducks_path, class: "btn btn-primary w-40 align-self-center" %></p>

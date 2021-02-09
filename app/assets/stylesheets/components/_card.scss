@@ -1,0 +1,22 @@
+.card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: rgba(250, 250,250, 0.1);
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.btn {
+  border-color: rgb(254, 127, 45);
+  background-color: rgb(254, 127, 45);
+  color: white;
+  border-width: 2px;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #506D4E;
+  border-color: #506D4E;
+}
