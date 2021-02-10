@@ -30,6 +30,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'bootstrap_form', '~> 4.0'
+
 # Use Cloudinary
 gem 'cloudinary'
 gem 'mini_magick'
