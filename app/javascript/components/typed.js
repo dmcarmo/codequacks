@@ -1,11 +1,11 @@
 import Typed from 'typed.js';
 const typed = () => { 
   new Typed('.typed', {
-    strings: ['Going mental?',"Hire me, I'll debug your Code", ""],
-    typeSpeed: 40,
+    strings: ['Going mental?',"Hire me, I'll debug your Code"],
+    typeSpeed: 60,
+    backSpeed: 60,
     loop: true,
-    loopCount: 4,
-    showCursor: false
+    showCursor: false,
   })
 };
 export { typed };
