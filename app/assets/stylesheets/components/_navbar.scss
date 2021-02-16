@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,6 +15,11 @@
 
 .dropdown {
   padding-left: 16px;
+}
+
+.dropdown-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 #navbar-left {
