@@ -4,7 +4,8 @@
   border-color: rgba(250, 250,250, 0.1);
   border-radius: 7px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 0px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -19,4 +20,25 @@
   background-color: white;
   color: #506D4E;
   border-color: #506D4E;
+}
+
+.card::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 2px rgb(130, 146, 182);
+  opacity: 0;
+  transition: opacity 1.7s;
+}
+
+.card:hover {
+  transform: scale(1, 1);
+}
+
+.card:hover::after {
+  opacity: 1;
 }
