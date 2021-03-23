@@ -12,46 +12,27 @@
         <div class="container-title shadow bg-white rounded">Book <%= @duck.name %> now</div>
       </div>
       <div id="duck-booking-dates" data-unavailable="<%= @duck.unavailable_dates.to_json %>"></div>
-      <!--
       <%= simple_form_for [@duck, @booking] do |f| %>
-        <%= f.input :start_time %>
-        <%= f.input :end_time %>
+        <%= f.input :start_time, as: :string, label: "Pick a date", required: false, input_html: {class: "range_start d-none"} %>
+        <%= f.input :end_time, as: :string, label: false, required: false, input_html: {class: "range_end d-none"} %>
         <%= f.submit class: 'btn btn-primary mt-3' %>
       <% end %>
-      
-      <%= simple_form_for [@duck, @booking] do |f| %>
-        <%= f.input :start_time, as: :string, required: true, input_html: {class: "datepicker"} %>
-        <%= f.input :end_time, as: :string, required: true, input_html: {class: "datepicker"} %>
-        <%= f.submit class: 'btn btn-primary mt-3' %>
-      <% end %>
-      
-      <%= simple_form_for [@duck, @booking] do |f| %>
-        <%= f.input :start_time, as: :string, label: "range", required: true, input_html: {class: "rangepicker_alt"} %>
-        <%= f.submit class: 'btn btn-primary mt-3' %>
-      <% end %>
-      -->
-
-      <%= simple_form_for [@duck, @booking] do |f| %>
-        <%= f.input :start_time, as: :string, label: "Start Date", required: true, input_html: {class: "rangepicker"} %>
-        <%= f.input :end_time, as: :string, label: "End Date", required: true, input_html: {id: "secondRangeInput"} %>
-        <%= f.submit class: 'btn btn-primary mt-3' %>
-      <% end %>
-      
       <br>
       <!-- Needs an AJAX script to return the booking cost depending on the selected dates -->
       <span>Cost: <%= @duck.price %>/day</span>
-    
       <br>
       <br>
+      <!-- move this calendar to an admin page
       <%= month_calendar(events: @duck.bookings) do |date, bookings| %>
         <%= date.day %>
         <% bookings.each do |booking| %>
           <div class="booked">
-            <!-- <%= User.find(booking.user_id).email %> -->
+            <%= link_to "See Booking", booking_path(booking) %>
             <span>BOOKED</span>
           </div>
         <% end %>
       <% end %>
+      -->
     </div>
   </div>
 </div>

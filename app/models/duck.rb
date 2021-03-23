@@ -15,7 +15,6 @@ class Duck < ApplicationRecord
 
   def unavailable_dates
     bookings.pluck(:start_time, :end_time).map do |range|
-      puts range
       { from: range[0], to: range[1] }
     end
   end

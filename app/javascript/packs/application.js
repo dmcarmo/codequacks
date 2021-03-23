@@ -38,22 +38,15 @@ document.addEventListener('turbolinks:load', () => {
   initStarRating();
   addDuckEvents();
   typed();
-  flatpickr(".datepicker", {
-    minDate: "today"
-  });
-  flatpickr(".rangepicker_alt", {
-    mode: "range",
-    minDate: "today",
-  });
   const startDateInput = document.getElementById('booking_start_time');
   const endDateInput = document.getElementById('booking_end_time');
   if (startDateInput) {
     const unavailableDates = JSON.parse(document.querySelector('#duck-booking-dates').dataset.unavailable);
-    flatpickr(".rangepicker", {
-      mode: "range",
+    flatpickr(".range_start", {
+      "plugins": [rangePlugin({ input: ".range_end"})],
       minDate: "today",
-      disable: unavailableDates,
-      "plugins": [rangePlugin({ input: "#secondRangeInput"})]
+      inline: true,
+      disable: unavailableDates
     });
   };
 });
