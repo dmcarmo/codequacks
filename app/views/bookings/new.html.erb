@@ -1,20 +1,54 @@
-<div class="pages-banner d-flex justify-content-center" >
+<div class="pages-banner d-flex justify-content-center">
   <div class="pages-banner-content">
     <div class="pages-white-box">
     </div>
   </div>
 </div>
 
-<div class="container" >
+<div class="container">
   <div class="row">
     <div class="col">
       <div class="d-flex justify-content-center">
         <div class="container-title shadow bg-white rounded">Book <%= @duck.name %> now</div>
       </div>
+      <!--
       <%= simple_form_for [@duck, @booking] do |f| %>
         <%= f.input :start_time %>
         <%= f.input :end_time %>
         <%= f.submit class: 'btn btn-primary mt-3' %>
+      <% end %>
+      
+      <%= simple_form_for [@duck, @booking] do |f| %>
+        <%= f.input :start_time, as: :string, required: true, input_html: {class: "datepicker"} %>
+        <%= f.input :end_time, as: :string, required: true, input_html: {class: "datepicker"} %>
+        <%= f.submit class: 'btn btn-primary mt-3' %>
+      <% end %>
+      -->
+      <%= simple_form_for [@duck, @booking] do |f| %>
+        <%= f.input :start_time, as: :string, label: "range", required: true, input_html: {class: "rangepicker_alt"} %>
+        <%= f.submit class: 'btn btn-primary mt-3' %>
+      <% end %>
+
+      <%= simple_form_for [@duck, @booking] do |f| %>
+        <%= f.input :start_time, as: :string, label: "Start Date", required: true, input_html: {class: "rangepicker"} %>
+        <%= f.input :end_time, as: :string, label: "End Date", required: true, input_html: {id: "secondRangeInput"} %>
+        <%= f.submit class: 'btn btn-primary mt-3' %>
+      <% end %>
+      
+      <br>
+      <!-- Needs an AJAX script to return the booking cost depending on the selected dates -->
+      <span>Cost: <%= @duck.price %>/day</span>
+    
+      <br>
+      <br>
+      <%= month_calendar(events: @duck.bookings) do |date, bookings| %>
+        <%= date.day %>
+        <% bookings.each do |booking| %>
+          <div class="booked">
+            <!-- <%= User.find(booking.user_id).email %> -->
+            <span>BOOKED</span>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

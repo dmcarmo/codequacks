@@ -24,6 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import flatpickr from "flatpickr";
+import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
 // Internal imports, e.g:
 import { initStarRating } from '../components/rating';
@@ -33,7 +35,19 @@ import { typed } from'../components/typed';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initStarRating()
+  initStarRating();
   addDuckEvents();
-  typed()
+  typed();
+  flatpickr(".datepicker", {
+    minDate: "today"
+  });
+  flatpickr(".rangepicker_alt", {
+    mode: "range",
+    minDate: "today",
+  });
+  flatpickr(".rangepicker", {
+    mode: "range",
+    minDate: "today",
+    "plugins": [rangePlugin({ input: "#secondRangeInput"})]
+  });
 });
