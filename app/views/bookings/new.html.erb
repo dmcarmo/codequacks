@@ -11,6 +11,7 @@
       <div class="d-flex justify-content-center">
         <div class="container-title shadow bg-white rounded">Book <%= @duck.name %> now</div>
       </div>
+      <div id="duck-booking-dates" data-unavailable="<%= @duck.unavailable_dates.to_json %>"></div>
       <!--
       <%= simple_form_for [@duck, @booking] do |f| %>
         <%= f.input :start_time %>
@@ -23,11 +24,12 @@
         <%= f.input :end_time, as: :string, required: true, input_html: {class: "datepicker"} %>
         <%= f.submit class: 'btn btn-primary mt-3' %>
       <% end %>
-      -->
+      
       <%= simple_form_for [@duck, @booking] do |f| %>
         <%= f.input :start_time, as: :string, label: "range", required: true, input_html: {class: "rangepicker_alt"} %>
         <%= f.submit class: 'btn btn-primary mt-3' %>
       <% end %>
+      -->
 
       <%= simple_form_for [@duck, @booking] do |f| %>
         <%= f.input :start_time, as: :string, label: "Start Date", required: true, input_html: {class: "rangepicker"} %>

@@ -45,9 +45,15 @@ document.addEventListener('turbolinks:load', () => {
     mode: "range",
     minDate: "today",
   });
-  flatpickr(".rangepicker", {
-    mode: "range",
-    minDate: "today",
-    "plugins": [rangePlugin({ input: "#secondRangeInput"})]
-  });
+  const startDateInput = document.getElementById('booking_start_time');
+  const endDateInput = document.getElementById('booking_end_time');
+  if (startDateInput) {
+    const unavailableDates = JSON.parse(document.querySelector('#duck-booking-dates').dataset.unavailable);
+    flatpickr(".rangepicker", {
+      mode: "range",
+      minDate: "today",
+      disable: unavailableDates,
+      "plugins": [rangePlugin({ input: "#secondRangeInput"})]
+    });
+  };
 });

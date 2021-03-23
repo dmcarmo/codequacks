@@ -7,9 +7,16 @@ class Duck < ApplicationRecord
   validates :price, numericality: { greater_than_or_equal_to: 0 }
 
   include PgSearch::Model
-    pg_search_scope :global_search,
-      against: [ :name, :description],
-      using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
-    }
+  pg_search_scope :global_search,
+                  against: %i[name description],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
+  def unavailable_dates
+    bookings.pluck(:start_time, :end_time).map do |range|
+      puts range
+      { from: range[0], to: range[1] }
+    end
+  end
 end
