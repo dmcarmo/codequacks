@@ -24,13 +24,12 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import flatpickr from "flatpickr";
-import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
 // Internal imports, e.g:
 import { initStarRating } from '../components/rating';
 import { addDuckEvents } from '../components/modal-card';
 import { typed } from'../components/typed';
+import '../components/flatpickr';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -38,15 +37,4 @@ document.addEventListener('turbolinks:load', () => {
   initStarRating();
   addDuckEvents();
   typed();
-  const startDateInput = document.getElementById('booking_start_time');
-  const endDateInput = document.getElementById('booking_end_time');
-  if (startDateInput) {
-    const unavailableDates = JSON.parse(document.querySelector('#duck-booking-dates').dataset.unavailable);
-    flatpickr(".range_start", {
-      "plugins": [rangePlugin({ input: ".range_end"})],
-      minDate: "today",
-      inline: true,
-      disable: unavailableDates
-    });
-  };
 });

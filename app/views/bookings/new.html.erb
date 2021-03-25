@@ -15,13 +15,11 @@
       <%= simple_form_for [@duck, @booking] do |f| %>
         <%= f.input :start_time, as: :string, label: "Pick a date", required: false, input_html: {class: "range_start d-none"} %>
         <%= f.input :end_time, as: :string, label: false, required: false, input_html: {class: "range_end d-none"} %>
+        <p>Cost: <span id="duck-price-per-day"><%= @duck.price %></span> €/day</p>
+        <p>Book for <span id="total-days">0</span> days</p>
+        <p>Total price: <span id="total-price">0</span> €</p>
         <%= f.submit class: 'btn btn-primary mt-3' %>
       <% end %>
-      <br>
-      <!-- Needs an AJAX script to return the booking cost depending on the selected dates -->
-      <span>Cost: <%= @duck.price %>/day</span>
-      <br>
-      <br>
       <!-- move this calendar to an admin page
       <%= month_calendar(events: @duck.bookings) do |date, bookings| %>
         <%= date.day %>
