@@ -12,6 +12,12 @@
         <div class="btn btn-primary">
           <%= link_to "Book This Duck", new_duck_booking_path(duck) %>
         </div>
+        <%= @booking %>
+
+        <%#= render "bookings/form", duck: duck %>
+
+        
+        <div id="duck-booking-dates" data-unavailable="<%= duck.unavailable_dates.to_json %>"></div>
         <% if policy(duck).edit? %>
           <div class="btn btn-primary">
             <%= link_to "Edit", edit_duck_path(duck) %>
@@ -22,6 +28,7 @@
             <%= link_to "Destroy", duck_path(duck), method: :delete, data: { confirm: "Are you sure you wanna destroy #{duck.name}?" } %>
           </div>
         <% end %>
+        <!--
         <h2 class="pt-3">Add a review</h2>
         <% if @booking%>
           <%= simple_form_for [@booking, @review] do |f| %>
@@ -31,6 +38,7 @@
           <% end %>
           <br>
         <% end %>
+        -->
         <% duck.reviews.each do |review| %>
           <dl><%= "⭐️" * review.rating  if review.rating %></dl>
           <dl><%= review.content %></dl>

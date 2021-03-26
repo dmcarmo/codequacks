@@ -10,11 +10,11 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def new
-    @booking = Booking.new
-    authorize @booking
-    @duck = Duck.find(params[:duck_id])
-  end
+  # def new
+    # @booking = Booking.new
+    # authorize @booking
+    # @duck = Duck.find(params[:duck_id])
+  # end
 
   def create
     @booking = Booking.new(booking_params)
