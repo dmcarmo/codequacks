@@ -8,20 +8,6 @@
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
-  border-color: rgb(254, 127, 45);
-  background-color: rgb(254, 127, 45);
-  color: white;
-  border-width: 2px;
-  border-radius: 25px;
-}
-
-.btn:hover {
-  background-color: white;
-  color: #506D4E;
-  border-color: #506D4E;
-}
-
 .card::after {
   content: ' ';
   position: absolute;
@@ -42,3 +28,19 @@
 .card:hover::after {
   opacity: 1;
 }
+
+.btn {
+  z-index: 1;
+  border-color: rgb(254, 127, 45);
+  background-color: rgb(254, 127, 45);
+  color: white;
+  border-width: 2px;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #506D4E;
+  border-color: #506D4E;
+}
+
