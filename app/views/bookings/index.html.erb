@@ -23,9 +23,9 @@
                 <%= booking.duck.description %>
               <% end %>
             </h6>
-            <p class="card-text"><strong>Price: </strong> <%= booking.duck.price %>€</p>
-            <p><strong> Start date: </strong> <%=booking.start_time.strftime("%-d %b %Y") %></p>
-            <p><strong> End date: </strong> <%= booking.end_time.strftime("%-d %b %Y") %></p>
+            <p class="card-text"><strong>Price: </strong> <%= booking.total_cost %>€</p>
+            <p><strong> Start date: </strong> <%=booking.start_date.strftime("%-d %b %Y") %></p>
+            <p><strong> End date: </strong> <%= booking.end_date.strftime("%-d %b %Y") %></p>
             <div class="d-flex flex-column h-100 justify-content-between">
               <%= link_to "See Booking", booking_path(booking), class: "booking btn btn-primary w-40 align-self-center" %>
             </div>

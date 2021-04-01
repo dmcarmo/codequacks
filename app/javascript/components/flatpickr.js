@@ -1,8 +1,8 @@
 import flatpickr from "flatpickr";
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
-const startDateInput = document.getElementById('booking_start_time');
-const endDateInput = document.getElementById('booking_end_time');
+const startDateInput = document.getElementById('booking_start_date');
+const endDateInput = document.getElementById('booking_end_date');
 if (startDateInput) {
   const unavailableDates = JSON.parse(document.querySelector('#duck-booking-dates').dataset.unavailable);
   const picker = flatpickr(".range_start", {
@@ -40,6 +40,7 @@ if (startDateInput) {
   clear.addEventListener("click", function() {
     picker.clear();
     totalDays.innerText = 0;
+    stringDays.innerText = " days";
     totalCostElement.innerText = 0;
   }, false);
 };

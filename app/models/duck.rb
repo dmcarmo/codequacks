@@ -14,14 +14,14 @@ class Duck < ApplicationRecord
                   }
 
   def unavailable_dates
-    bookings.pluck(:start_time, :end_time).map do |range|
-      { from: Date.parse(range[0].to_s), to: Date.parse(range[1].to_s) }
+    bookings.pluck(:start_date, :end_date).map do |range|
+      { from: range[0], to: range[1] }
     end
   end
 
-  def available?(start_time, end_time)
+  def available?(start_date, end_date)
     bookings.each do |b|
-      return false if (b.start_time..b.end_time).overlaps?(start_time.to_date..end_time.to_date)
+      return false if (b.start_date..b.end_date).overlaps?(start_date..end_date)
     end
     return true
   end

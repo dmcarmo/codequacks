@@ -9,15 +9,11 @@
         <%= cl_image_tag duck.photo.key, height: 400, width: 330, crop: :fill %>
         <p class="pt-3"><%= duck.description %></p>
         <p><strong>Price per day: </strong> <%= duck.price %>€</p>
+        <!--
         <div class="btn btn-primary">
-          <%= link_to "Book This Duck", new_duck_booking_path(duck) %>
+          <%#= link_to "Book This Duck", new_duck_booking_path(duck) %>
         </div>
-        <%= @booking %>
-
-        <%#= render "bookings/form", duck: duck %>
-
-        
-        <div id="duck-booking-dates" data-unavailable="<%= duck.unavailable_dates.to_json %>"></div>
+        -->
         <% if policy(duck).edit? %>
           <div class="btn btn-primary">
             <%= link_to "Edit", edit_duck_path(duck) %>
@@ -30,14 +26,14 @@
         <% end %>
         <!--
         <h2 class="pt-3">Add a review</h2>
-        <% if @booking%>
-          <%= simple_form_for [@booking, @review] do |f| %>
-            <%= f.input :rating, collection: (1..5).to_a %>
-            <%= f.input :content %>
-            <%= f.submit class: 'btn btn-primary' %>
-          <% end %>
+        <%# if @booking%>
+          <%#= simple_form_for [@booking, @review] do |f| %>
+            <%#= f.input :rating, collection: (1..5).to_a %>
+            <%#= f.input :content %>
+            <%#= f.submit class: 'btn btn-primary' %>
+          <%# end %>
           <br>
-        <% end %>
+        <%# end %>
         -->
         <% duck.reviews.each do |review| %>
           <dl><%= "⭐️" * review.rating  if review.rating %></dl>

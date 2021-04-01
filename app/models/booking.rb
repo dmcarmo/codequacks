@@ -3,11 +3,11 @@ class Booking < ApplicationRecord
   belongs_to :user
   has_many :reviews
 
-  validates :start_time, :end_time, presence: true, allow_blank: false
-  validate :end_time_after_start_time
+  validates :start_date, :end_date, presence: true, allow_blank: false
+  validate :end_date_after_start_date
 
   def duration
-    (((end_time - start_time) / 86_400) + 1).to_i
+    (end_date - start_date).to_i + 1
   end
 
   def total_cost
@@ -16,9 +16,9 @@ class Booking < ApplicationRecord
 
   private
 
-  def end_time_after_start_time
-    return if end_time.blank? || start_time.blank?
+  def end_date_after_start_date
+    return if end_date.blank? || start_date.blank?
 
-    errors.add(:end_time, "must be after the start date") if end_time < start_time
+    errors.add(:end_date, "must be after the start date") if end_date < start_date
   end
 end
