@@ -40,9 +40,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Bootstrap forms
-gem 'bootstrap_form', '~> 4.0'
-
 # Calendar
 gem 'simple_calendar', '~> 2.4'
 
