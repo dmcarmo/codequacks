@@ -7,29 +7,41 @@
 
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-md-6 d-flex">
+      <!--
       <div class="d-flex justify-content-center">
-        <div class="container-title shadow bg-white rounded">Book <%= @duck.name %> now</div>
+        <div class="container-title shadow bg-white rounded">Book <%#= @duck.name %> now</div>
       </div>
+      -->
+      <div class="card-body flex-column justify-content-between">
+        <p><%= @duck.name %></p>
+        <%= cl_image_tag @duck.photo.key, height: 400, width: 330, crop: :fill %>
+        <p class="pt-3"><%= @duck.description %></p>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex">
       <div id="duck-booking-dates" data-unavailable="<%= @duck.unavailable_dates.to_json %>"></div>
       <%= simple_form_for [@duck, @booking] do |f| %>
-        <%= f.input :start_time, as: :string, label: "Pick a date", required: false, input_html: {class: "range_start d-none"} %>
-        <%= f.input :end_time, as: :string, label: false, required: false, input_html: {class: "range_end d-none"} %>
-        <p>Cost: <span id="duck-price-per-day"><%= @duck.price %></span> €/day</p>
-        <p>Book for <span id="total-days">0</span> days</p>
-        <p>Total price: <span id="total-price">0</span> €</p>
-        <%= f.submit class: 'btn btn-primary mt-3' %>
+        <p><strong>Pick a date</strong></p>
+        <%= f.input :start_time, as: :string, label: false, required: true, input_html: {class: "range_start d-none"} %>
+        <%= f.input :end_time, as: :string, label: false, required: true, input_html: {class: "range_end d-none"} %>
+        <button type="button" id="clear_button" title="clear" data-clear>Clear</button>
+        <p><strong>Price per day: </strong><span id="duck-price-per-day"><%= @duck.price.to_int %></span> €</p>
+        <p>Book for <span id="total-days">0</span><span id="string-days"> days</span></p>
+        <p>Total cost: <span id="total-cost">0</span> €</p>
+        <%= f.submit disabled: true, class: 'btn btn-primary mt-3', id: 'submit_button' %>
       <% end %>
+      
       <!-- move this calendar to an admin page
-      <%= month_calendar(events: @duck.bookings) do |date, bookings| %>
-        <%= date.day %>
-        <% bookings.each do |booking| %>
+      <%#= month_calendar(events: @duck.bookings) do |date, bookings| %>
+        <%#= date.day %>
+        <%# bookings.each do |booking| %>
           <div class="booked">
-            <%= link_to "See Booking", booking_path(booking) %>
+            <%#= link_to "See Booking", booking_path(booking) %>
             <span>BOOKED</span>
           </div>
-        <% end %>
-      <% end %>
+        <%# end %>
+      <%# end %>
       -->
     </div>
   </div>

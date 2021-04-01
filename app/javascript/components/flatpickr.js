@@ -5,7 +5,7 @@ const startDateInput = document.getElementById('booking_start_time');
 const endDateInput = document.getElementById('booking_end_time');
 if (startDateInput) {
   const unavailableDates = JSON.parse(document.querySelector('#duck-booking-dates').dataset.unavailable);
-  flatpickr(".range_start", {
+  const picker = flatpickr(".range_start", {
     "plugins": [rangePlugin({ input: ".range_end"})],
     minDate: "today",
     inline: true,
@@ -13,14 +13,20 @@ if (startDateInput) {
   });
   const duckPricePerDay = document.getElementById("duck-price-per-day").innerText;
   const totalDays = document.getElementById("total-days");
-  const totalPriceElement = document.getElementById("total-price");
+  const stringDays = document.getElementById("string-days");
+  const totalCostElement = document.getElementById("total-cost");
+  const submitButton = document.getElementById("submit_button");
 
   const dynamicPrice = () => {
     let dateDiffInMilliseconds = new Date(endDateInput.value) - new Date(startDateInput.value);
-    let nbrOfDays = dateDiffInMilliseconds / 86400000;
-    if(startDateInput.value && endDateInput.value) {
-      totalDays.innerText = nbrOfDays
-      totalPriceElement.innerText = nbrOfDays * duckPricePerDay
+    let nbrOfDays = (dateDiffInMilliseconds / 86400000) + 1;
+    if (startDateInput.value && endDateInput.value) {
+      totalDays.innerText = nbrOfDays;
+      stringDays.innerText = (nbrOfDays === 1) ? " day" : " days";
+      totalCostElement.innerText = nbrOfDays * duckPricePerDay;
+      submitButton.disabled = null;
+    } else {
+      submitButton.disabled = "disabled";
     }
   };
 
@@ -29,4 +35,11 @@ if (startDateInput) {
       dynamicPrice();
     });
   });
+  
+  const clear = document.getElementById("clear_button");
+  clear.addEventListener("click", function() {
+    picker.clear();
+    totalDays.innerText = 0;
+    totalCostElement.innerText = 0;
+  }, false);
 };

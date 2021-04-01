@@ -10,11 +10,11 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  # def new
-    # @booking = Booking.new
-    # authorize @booking
-    # @duck = Duck.find(params[:duck_id])
-  # end
+  def new
+    @booking = Booking.new
+    authorize @booking
+    @duck = Duck.find(params[:duck_id])
+  end
 
   def create
     @booking = Booking.new(booking_params)
@@ -22,10 +22,10 @@ class BookingsController < ApplicationController
     @booking.duck = @duck
     @booking.user = current_user
     authorize @booking
-    if @booking.save
+    if @duck.available?(@booking.start_time, @booking.end_time) && @booking.save
       redirect_to bookings_path, notice: "Thank you for booking #{@duck.name}"
     else
-      render :new
+      redirect_to new_duck_booking_path(@duck), notice: "The dates you selected are no longer available"
     end
   end
 

@@ -15,8 +15,6 @@ class DucksController < ApplicationController
 
   def show
     authorize @duck
-    @booking = Booking.new
-
     @review = Review.new
     # @booking = Booking.find_by(user: current_user, duck: @duck)
   end

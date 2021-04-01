@@ -18,4 +18,11 @@ class Duck < ApplicationRecord
       { from: Date.parse(range[0].to_s), to: Date.parse(range[1].to_s) }
     end
   end
+
+  def available?(start_time, end_time)
+    bookings.each do |b|
+      return false if (b.start_time..b.end_time).overlaps?(start_time.to_date..end_time.to_date)
+    end
+    return true
+  end
 end
