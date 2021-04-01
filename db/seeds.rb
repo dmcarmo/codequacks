@@ -77,7 +77,7 @@ swift.photo.attach(io: file, filename: 'nes10.png', content_type: 'image/png')
 swift.save!
 
 cpp = Duck.new(name: "PoliC++e Duck", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/040TB-London-Rubber-Ducks---Policeman_1024x.jpg?v=1549638278')
+file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/RubberDuckPoliceman1_grande.jpg')
 cpp.photo.attach(io: file, filename: 'nes11.png', content_type: 'image/png')
 cpp.save!
 
@@ -95,11 +95,11 @@ github.save!
 puts "Finished!"
 
 puts "Creating bookings..."
-booking_1 = Booking.create(user: isaline, duck: java_script, start_time: DateTime.strptime("09/7/2020 8:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("16/7/2020 8:00", "%d/%m/%Y %H:%M"), total_cost: 30)
-booking_2 = Booking.create(user: david_wylie, duck: ruby, start_time: DateTime.strptime("08/7/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("10/7/2020 10:00", "%d/%m/%Y %H:%M"), total_cost: 45)
-booking_3 = Booking.create(user: david_carmo, duck: rails, start_time: DateTime.strptime("08/2/2021 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("06/3/2021 12:00", "%d/%m/%Y %H:%M"), total_cost: 40)
-booking_4 = Booking.create(user: sylvia, duck: css, start_time: DateTime.strptime("08/12/2023 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/12/2023 5:00", "%d/%m/%Y %H:%M"), total_cost: 75)
-booking_5 = Booking.create(user: david_carmo, duck: html, start_time: DateTime.strptime("06/8/2020 6:00", "%d/%m/%Y %H:%M"), end_time: DateTime.strptime("09/9/2020 3:00", "%d/%m/%Y %H:%M"), total_cost: 75)
+booking_1 = Booking.create(user: isaline, duck: java_script, start_date: Date.strptime("09/7/2020", "%d/%m/%Y"), end_date: Date.strptime("16/7/2020", "%d/%m/%Y"))
+booking_2 = Booking.create(user: david_wylie, duck: ruby, start_date: Date.strptime("08/7/2020", "%d/%m/%Y"), end_date: Date.strptime("10/7/2020", "%d/%m/%Y"))
+booking_3 = Booking.create(user: david_carmo, duck: rails, start_date: Date.strptime("08/2/2021", "%d/%m/%Y"), end_date: Date.strptime("06/3/2021", "%d/%m/%Y"))
+booking_4 = Booking.create(user: sylvia, duck: css, start_date: Date.strptime("08/12/2023", "%d/%m/%Y"), end_date: Date.strptime("09/12/2023", "%d/%m/%Y"))
+booking_5 = Booking.create(user: david_carmo, duck: html, start_date: Date.strptime("06/8/2020", "%d/%m/%Y"), end_date: Date.strptime("09/9/2020", "%d/%m/%Y"))
 
 puts "Finished!"
 

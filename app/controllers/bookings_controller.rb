@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   before_action :set_booking, only: [:show]
 
   def index
@@ -23,10 +22,10 @@ class BookingsController < ApplicationController
     @booking.duck = @duck
     @booking.user = current_user
     authorize @booking
-    if @booking.save
-      redirect_to bookings_path, notice: "Thank your for your booking #{@duck.name}"
+    if @duck.available?(@booking.start_date, @booking.end_date) && @booking.save
+      redirect_to bookings_path, notice: "Thank you for booking #{@duck.name}"
     else
-      render :new
+      redirect_to new_duck_booking_path(@duck), notice: "The dates you selected are no longer available"
     end
   end
 
@@ -37,6 +36,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_time, :end_time)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

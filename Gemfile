@@ -6,31 +6,45 @@ ruby '2.6.6'
 # Authentication & Authorization
 gem 'devise'
 gem 'pundit'
+
 # PG search
 gem 'pg_search', '~> 2.3.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0', '>= 6.1.0.0'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Bootstrap forms
 gem 'bootstrap_form', '~> 4.0'
+
+# Calendar
+gem 'simple_calendar', '~> 2.4'
 
 # Use Cloudinary
 gem 'cloudinary'
@@ -42,11 +56,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'bootstrap_form', '~> 4.0'
 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'rubocop'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
