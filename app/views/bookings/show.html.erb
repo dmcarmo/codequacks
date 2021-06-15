@@ -1,11 +1,22 @@
-<div class="container">
+<div class="pages-banner1 d-flex justify-content-center" >
+  <div class="pages-banner-content">
+    <div class="pages-white-box">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
 <br>
-  <div class="card-product">
-    <%= cl_image_tag @booking.duck.photo.key, height: 300, width: 400, crop: :fill %>
-    <div class="card-product-infos">
-      <h2><strong><%= @booking.duck.name %></strong></h2>
-      <p><%= @booking.duck.description %></p>
-      <p><strong>Price: </strong> <%= @booking.duck.price %></p>
+  <div class="row justify-content-center">
+    <div class="col-md-6 d-flex px-0">
+      <div class="card-product">
+        <%= cl_image_tag @booking.duck.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-product-infos">
+          <h2><strong><%= @booking.duck.name %></strong></h2>
+          <p><%= @booking.duck.description %></p>
+          <p><strong>Price: </strong> <%= @booking.duck.price %>€</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -43,6 +43,10 @@ gem 'jbuilder', '~> 2.7'
 # Calendar
 gem 'simple_calendar', '~> 2.4'
 
+# Stripe
+gem 'stripe'
+gem 'stripe_event'
+
 # Use Cloudinary
 gem 'cloudinary'
 gem 'mini_magick'

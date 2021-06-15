@@ -1,0 +1,30 @@
+<div class="pages-banner1 d-flex justify-content-center" >
+  <div class="pages-banner-content">
+    <div class="pages-white-box">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+<br>
+  <div class="row">
+    <div class="col">
+      <h2>Checkout summary</h2>
+      <p>Payment for:</p>
+      <p>
+        <strong><%= @booking.duration %> days</strong> booking (from <%= @booking.start_date %> to <%= @booking.end_date %>) of <strong><%= @booking.duck.name %></strong> for <strong><%= @booking.total_cost %>€</strong>
+      </p>
+      <button id="pay" class="btn btn-primary">Pay</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @booking.checkout_session_id %>'
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>
