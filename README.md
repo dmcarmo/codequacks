@@ -8,18 +8,20 @@ They may not speak a lot, but they'll make you see the light!
 
 ## Seriously...
 
-This crazy project started as an idea for the Airbnb clone week challenge in [Le Wagon Web Development bootcamp](https://www.lewagon.com/lisbon/web-development-course/full-time#curriculum). The goal of that challenge was to build a Rails app for a rental business (hence the Airbnb clone) using [lewagon/rails-templates](https://github.com/lewagon/rails-templates) (created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team).
+This crazy project started as an idea for the Airbnb clone challenge in [Le Wagon Web Development bootcamp](https://www.lewagon.com/lisbon/web-development-course/full-time#curriculum). The goal of that challenge was to build a Rails app for a rental business (hence the Airbnb clone) using [lewagon/rails-templates](https://github.com/lewagon/rails-templates) (created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team) to jumpstart the Rails app.
 
 The [initial project](https://github.com/dc-lewagon/Airdnd) was developed by these coding wizards:
-* David Carmo
-* David Wylie
-* Isaline
-* Sylvia Grill
+* [David Carmo](https://github.com/dmcarmo)
+* [David Wylie](https://github.com/7thwave42)
+* [Isaline W](https://github.com/isaline-w)
+* [Sylvia Grill](https://github.com/SilviaG8)
 
 After the bootcamp both David's decided to fix the remaining bugs while adding some missing functionality, and so Codequacks was born.
     
 ### How it was built?
-Rails, Bootstrap, JS (?)
+This project uses Ruby on Rails (plus a plethora of gems), Bootstrap and some Javascript magic.
 
 ### Where can I see a demo?
 <https://codequacks.herokuapp.com>
+
+### Enjoy!
