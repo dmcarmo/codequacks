@@ -15,7 +15,7 @@
           <div class="d-flex flex-column h-100 justify-content-between">
             <h5 class="card-title"><strong><%= duck.name %></strong></h5>
             <p><%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %></p>
-            <p class="card-text"><strong>Price per day:</strong> <%= duck.price %>€</p>
+            <p class="card-text"><strong>Price per day:</strong> <%= duck.price.to_int %>€</p>
             <%= link_to "Book this Duck", new_duck_booking_path(duck), class: "booking btn btn-primary w-40 align-self-center" %>
           </div>
         </div>

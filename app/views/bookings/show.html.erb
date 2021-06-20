@@ -14,7 +14,7 @@
           <%= cl_image_tag @booking.duck.photo.key, height: 300, width: 400, crop: :fill %>
           <h2><strong><%= @booking.duck.name %></strong></h2>
           <p><%= @booking.duck.description %></p>
-          <p><strong>Price: </strong> <%= @booking.duck.price %>€</p>
+          <p><strong>Price: </strong> <%= @booking.total_cost %>€</p>
         </div>
       </div>
     </div>
