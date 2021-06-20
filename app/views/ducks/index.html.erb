@@ -11,7 +11,7 @@
     <% @ducks.each do |duck| %>
       <%= render "ducks/show", duck: duck %>
       <div class="col-md-4 d-flex">
-        <div class="card card-body" id="<%= duck.id %>">
+        <div class="card card-body card-modal" id="<%= duck.id %>">
           <div class="d-flex flex-column h-100 justify-content-between">
             <h5 class="card-title"><strong><%= duck.name %></strong></h5>
             <p><%= cl_image_tag duck.photo.key, class:"card-text", height: 300, width: 250, crop: :fill %></p>
