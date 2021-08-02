@@ -6,7 +6,7 @@ Behold that beacon, in all it’s luminescent yellow glory!
 
 Codequacks
 
-We have assembled (in a legally dissimilar manner from all known and unknown Disney intellectual properties.) a quack team of expert coder ducks, with a burning desire to help you crush the hideous bugs in your code, before those bugs crush your very soul…
+We have assembled (in a legally dissimilar manner from all known and unknown Disney intellectual properties) a quack team of expert coder ducks, with a burning desire to help you crush the hideous bugs in your code, before those bugs crush your very soul…
 
 Plus they look pretty cute sitting on your desk.
 
