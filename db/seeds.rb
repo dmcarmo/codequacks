@@ -27,67 +27,67 @@ puts "Finished!"
 
 puts "Creating ducks..."
 java_script = Duck.new(name: "Jay Scripped", description: "Useful javascript functions and classes. The main helper is fw , an object containing constants, methods and classes.", price: 23.00, user: sylvia)
-file = URI.open('https://assets.onbuy.com/i26/product/f681eec013ce4742a40ec97d8e24a9b9-m502897/sunny-cool-sunglasses-rubber-duck-fun-pool-or-bath-toy.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/jay_scripped_rdbhc1.jpg')
 java_script.photo.attach(io: file, filename: 'nes1.png', content_type: 'image/png')
 java_script.save!
 
 database = Duck.new(name: "Greatest Database Duck, just really great", description: "What I've seen, what I've seen is so bad, because I am the greatest, just really great, we'll got, like you wouldn't believe data, so much data, all the data, database duck you'll ever find, other so call The Donalds that are ducks are just losers! The concept of global warming was created by and for the Chinese in order to make U.S. manufacturing non-competitive.", price: 10.00, user: isaline)
-file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2017/07/Trump-rubber-duck-Amsterdam-Duck-Store.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/greatest_database_duck_r0u0kq.jpg')
 database.photo.attach(io: file, filename: 'nes2.png', content_type: 'image/png')
 database.save!
 
 css = Duck.new(name: "CSSuperwoman", description: "Relax citizen! I will fix all your CSS troubles faster than a speeding bullet!", price: 15.00, user: sylvia)
-file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/superwoman-rubber-duck-leaning.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/cssuperwoman_fgwjux.jpg')
 css.photo.attach(io: file, filename: 'nes3.png', content_type: 'image/png')
 css.save!
 
 html = Duck.new(name: "Dr. H.T Emell", description: "Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML", price: 15.00, user: david_carmo)
-file = URI.open('https://smhttp-ssl-79234.nexcesscdn.net/pub/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/vender-PL/17138/RD140-YEL_ab-prime_item_9.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/dr_h_t_emell_lotclj.jpg')
 html.photo.attach(io: file, filename: 'nes4.png', content_type: 'image/png')
 html.save!
 
 rails = Duck.new(name: "Dr. Ruabbi O'Railly", description: "The Rails framework provides a large number of helpers for working with assets, dates, forms, numbers and model objects, to name a few.", price: 20.00, user: david_wylie)
-file = URI.open('https://www.amsterdamduckstore.com/wp-content/uploads/2015/07/doctor-man-rubber-duck-leaning.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/dr_ruabbi_o_railly_hxm5db.jpg')
 rails.photo.attach(io: file, filename: 'nes5.png', content_type: 'image/png')
 rails.save!
 
 ruby = Duck.new(name: "Albert Nodestein", description: "The definition of insanity is doing the same thing over and over again, but expecting different results...so put in a ticket you fool!", price: 30.00, user: david_wylie)
-file = URI.open('https://cdn.shopify.com/s/files/1/0604/4801/products/SG-REYTD-JCNYO_1024x1024_clipped_rev_1-min.jpeg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/albert_nodestein_bhllos.jpg')
 ruby.photo.attach(io: file, filename: 'nes6.png', content_type: 'image/png')
 ruby.save!
 
 php = Duck.new(name: "Ms Peppermint H Potter", description: "Please take your seat, you are already far behind in your coding study to be lollygagging around!.", price: 30.00, user: david_wylie)
-file = URI.open('https://cdn11.bigcommerce.com/s-nf2x4/images/stencil/1280x1280/products/617/10155/Teacher-Female-Star-Rubber-Duck-DITW-3__58501.1568745303.jpg?c=2&imbypass=on')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727815/codequacks/seeds/ms_peppermint_h_potter_japjuv.jpg')
 php.photo.attach(io: file, filename: 'nes7.png', content_type: 'image/png')
 php.save!
 
 python = Duck.new(name: "Pie? aye son!", description: "O ye'll tak' the high road, and I'll tak' the low road, And I'll be in Scodeland a'fore ye...", price: 30.00, user: david_wylie)
-file = URI.open('https://www.nationalgalleries.org/sites/default/files/product_images/bagpiper3.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727815/codequacks/seeds/pie_aye_son_skmvnn.jpg')
 python.photo.attach(io: file, filename: 'nes8.png', content_type: 'image/png')
 python.save!
 
 node = Duck.new(name: "Fire Duckpartment", description: "If your keyboard bursts into flames from frantic coding, I'll deal with it!.", price: 30.00, user: david_wylie)
-file = URI.open('https://s3.distributorcentral.com/uploads/7/D/7DE4346F10E829665D56058B8B92FBE3.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/fire_duckpartment_t06j3b.jpg')
 node.photo.attach(io: file, filename: 'nes9.png', content_type: 'image/png')
 node.save!
 
 swift = Duck.new(name: "Swift Experte", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://i.ebayimg.com/images/g/CqwAAOSwXI1eQdnW/s-l640.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727815/codequacks/seeds/swift_experte_vhzbx5.jpg')
 swift.photo.attach(io: file, filename: 'nes10.png', content_type: 'image/png')
 swift.save!
 
 cpp = Duck.new(name: "PoliC++e Duck", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://cdn.shopify.com/s/files/1/1011/8106/products/RubberDuckPoliceman1_grande.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727815/codequacks/seeds/police_duck_cs7mnn.jpg')
 cpp.photo.attach(io: file, filename: 'nes11.png', content_type: 'image/png')
 cpp.save!
 
 java = Duck.new(name: "Monsieur Ja'Va", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://lilalu-shop.com/media/image/9b/95/64/lilalu-quietscheente-rubber-duck-franzose-rotwein-baguette-french-wine-seine-eifelturm-eifel-tower_600x600.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/monsieur_ja_va_lsmytn.jpg')
 java.photo.attach(io: file, filename: 'nes12.png', content_type: 'image/png')
 java.save!
 
 github = Duck.new(name: "Github Explorer", description: "This is a small Ruby tutorial that should take no more than 20 minutes to complete. It makes the assumption that you already have Ruby installed.", price: 30.00, user: david_wylie)
-file = URI.open('https://www.duckshop.de/media/image/4a/62/f9/Badeente_Taucher_62491881.jpg')
+file = URI.open('https://res.cloudinary.com/doh7xoars/image/upload/v1661727814/codequacks/seeds/github_explorer_gxahys.jpg')
 github.photo.attach(io: file, filename: 'nes13.png', content_type: 'image/png')
 github.save!
 
