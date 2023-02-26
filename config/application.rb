@@ -8,13 +8,6 @@ Bundler.require(*Rails.groups)
 
 module Codequacks
   class Application < Rails::Application
-    # old stuff from rails 6.0.3
-    # config.generators do |generate|
-      # generate.assets false
-      # generate.helper false
-      # generate.test_framework :test_unit, fixture: false
-    # end
-    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
