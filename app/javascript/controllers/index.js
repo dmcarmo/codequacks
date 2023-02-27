@@ -10,8 +10,8 @@ application.register("bar-rating", BarRatingController)
 import DuckEventsController from "./duck_events_controller"
 application.register("duck-events", DuckEventsController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import FlatpickrController from "./flatpickr_controller"
+application.register("flatpickr", FlatpickrController)
 
 import TypedController from "./typed_controller"
 application.register("typed", TypedController)
