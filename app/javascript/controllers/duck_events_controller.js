@@ -1,6 +1,9 @@
+import { Controller } from "@hotwired/stimulus"
 import { Modal } from 'bootstrap';
 
-function addDuckEvents() {
+// Connects to data-controller="duck-events"
+export default class extends Controller {
+  connect() {
     const buttons = document.querySelectorAll('.booking');
     buttons.forEach(btn => btn.addEventListener("click", function(e) {
       e.stopPropagation();
@@ -13,5 +16,4 @@ function addDuckEvents() {
       modal.show();
     }));
   }
-  
-export { addDuckEvents };
+}

@@ -7,6 +7,9 @@ import { application } from "./application"
 import BarRatingController from "./bar_rating_controller"
 application.register("bar-rating", BarRatingController)
 
+import DuckEventsController from "./duck_events_controller"
+application.register("duck-events", DuckEventsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
