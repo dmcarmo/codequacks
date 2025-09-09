@@ -28,7 +28,4 @@ After the bootcamp both David's decided to fix the remaining bugs while adding s
 ### How it was built?
 This project uses Ruby on Rails (plus a plethora of gems), Bootstrap and some Javascript magic.
 
-### Where can I see a demo?
-<https://codequacks.herokuapp.com>
-
 ### Enjoy!
